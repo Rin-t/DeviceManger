@@ -16,6 +16,9 @@
 		24DFB39A29581B29004C754F /* DeviceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB39929581B29004C754F /* DeviceManagerTests.swift */; };
 		24DFB3A429581B29004C754F /* DeviceManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB3A329581B29004C754F /* DeviceManagerUITests.swift */; };
 		24DFB3A629581B29004C754F /* DeviceManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB3A529581B29004C754F /* DeviceManagerUITestsLaunchTests.swift */; };
+		24DFB3F029581DE9004C754F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 24DFB3EF29581DE9004C754F /* RxCocoa */; };
+		24DFB3F229581DE9004C754F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 24DFB3F129581DE9004C754F /* RxRelay */; };
+		24DFB3F429581DE9004C754F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24DFB3F329581DE9004C754F /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DFB3F429581DE9004C754F /* RxSwift in Frameworks */,
+				24DFB3F229581DE9004C754F /* RxRelay in Frameworks */,
+				24DFB3F029581DE9004C754F /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = DeviceManager;
+			packageProductDependencies = (
+				24DFB3EF29581DE9004C754F /* RxCocoa */,
+				24DFB3F129581DE9004C754F /* RxRelay */,
+				24DFB3F329581DE9004C754F /* RxSwift */,
+			);
 			productName = DeviceManager;
 			productReference = 24DFB37F29581B28004C754F /* DeviceManager.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 24DFB37629581B28004C754F;
+			packageReferences = (
+				24DFB3EE29581DE9004C754F /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 24DFB38029581B28004C754F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,8 +457,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +467,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.DeviceManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,8 +489,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +499,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.DeviceManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -602,6 +624,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24DFB3EE29581DE9004C754F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24DFB3EF29581DE9004C754F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24DFB3EE29581DE9004C754F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		24DFB3F129581DE9004C754F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24DFB3EE29581DE9004C754F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		24DFB3F329581DE9004C754F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24DFB3EE29581DE9004C754F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24DFB37729581B28004C754F /* Project object */;
 }

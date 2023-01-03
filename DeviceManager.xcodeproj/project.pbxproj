@@ -23,6 +23,7 @@
 		24DFB3FB29581F2F004C754F /* ManageAndroidDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB3FA29581F2F004C754F /* ManageAndroidDeviceViewController.swift */; };
 		24DFB3FF29582244004C754F /* ManageiOSDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */; };
 		24DFB4012958225B004C754F /* ManageAndroidDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB4002958225B004C754F /* ManageAndroidDeviceViewController.xib */; };
+		24DFB40D29641A88004C754F /* DeviceManagementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		24DFB3FA29581F2F004C754F /* ManageAndroidDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAndroidDeviceViewController.swift; sourceTree = "<group>"; };
 		24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageiOSDeviceViewController.xib; sourceTree = "<group>"; };
 		24DFB4002958225B004C754F /* ManageAndroidDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageAndroidDeviceViewController.xib; sourceTree = "<group>"; };
+		24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceManagementCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		24DFB3FC29582224004C754F /* iOSDeviceManagement */ = {
 			isa = PBXGroup;
 			children = (
+				24DFB40929641797004C754F /* ViewModel */,
 				24DFB40529640FFF004C754F /* View */,
 			);
 			path = iOSDeviceManagement;
@@ -162,6 +165,7 @@
 		24DFB3FD2958222D004C754F /* AndroidDeviceManagement */ = {
 			isa = PBXGroup;
 			children = (
+				24DFB4082964178D004C754F /* ViewModel */,
 				24DFB40429640FF3004C754F /* View */,
 			);
 			path = AndroidDeviceManagement;
@@ -189,8 +193,8 @@
 		24DFB40529640FFF004C754F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24DFB3F829581F1B004C754F /* ManageiOSDeviceViewController.swift */,
-				24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */,
+				24DFB40B29641A4E004C754F /* Controller */,
+				24DFB40A29641A48004C754F /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +211,37 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		24DFB4082964178D004C754F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24DFB40929641797004C754F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24DFB40A29641A48004C754F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		24DFB40B29641A4E004C754F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24DFB3F829581F1B004C754F /* ManageiOSDeviceViewController.swift */,
+				24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +358,7 @@
 			files = (
 				24DFB3FF29582244004C754F /* ManageiOSDeviceViewController.xib in Resources */,
 				24DFB38F29581B28004C754F /* LaunchScreen.storyboard in Resources */,
+				24DFB40D29641A88004C754F /* DeviceManagementCollectionViewCell.xib in Resources */,
 				24DFB38C29581B28004C754F /* Assets.xcassets in Resources */,
 				24DFB4012958225B004C754F /* ManageAndroidDeviceViewController.xib in Resources */,
 			);

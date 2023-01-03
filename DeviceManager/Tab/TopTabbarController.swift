@@ -18,12 +18,12 @@ final class TopTabBarController: UITabBarController {
         UITabBar.appearance().backgroundColor = .systemGray5
 
         setViewControllers([
-            setupWriteMemoViewController(),
-            setupMenuViewController()
+            setupManageiOSDeviceViewController(),
+            setupManageAndroidDeviceViewController()
         ], animated: false)
     }
 
-    private func setupWriteMemoViewController() -> UIViewController {
+    private func setupManageiOSDeviceViewController() -> UIViewController {
         let vc = ManageiOSDeviceViewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem = .init(title: "iOS", image: UIImage(systemName: "applelogo"), tag: 0)
@@ -31,7 +31,7 @@ final class TopTabBarController: UITabBarController {
         return nav
     }
 
-    private func setupMenuViewController() -> UIViewController {
+    private func setupManageAndroidDeviceViewController() -> UIViewController {
         let vc = ManageAndroidDeviceViewController()
         let nav = UINavigationController(rootViewController: vc)
         let image = UIImage(named: "android")
@@ -43,19 +43,16 @@ final class TopTabBarController: UITabBarController {
     
 }
 
-extension UIImage {
+private extension UIImage {
     func resize(size _size: CGSize) -> UIImage? {
         let widthRatio = _size.width / size.width
         let heightRatio = _size.height / size.height
         let ratio = widthRatio < heightRatio ? widthRatio : heightRatio
-
         let resizedSize = CGSize(width: size.width * ratio, height: size.height * ratio)
-
-        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0) // 変更
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
         draw(in: CGRect(origin: .zero, size: resizedSize))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-
         return resizedImage
     }
 }

@@ -113,7 +113,9 @@
 		24DFB38129581B28004C754F /* DeviceManager */ = {
 			isa = PBXGroup;
 			children = (
-				24DFB3F529581E9E004C754F /* Tab */,
+				24DFB40729641089004C754F /* Domain */,
+				24DFB40629641074004C754F /* Data */,
+				24DFB40229640FB3004C754F /* Presentation */,
 				24DFB38229581B28004C754F /* AppDelegate.swift */,
 				24DFB38429581B28004C754F /* SceneDelegate.swift */,
 				24DFB38629581B28004C754F /* ViewController.swift */,
@@ -145,28 +147,66 @@
 			isa = PBXGroup;
 			children = (
 				24DFB3F629581EB4004C754F /* TopTabbarController.swift */,
-				24DFB3FC29582224004C754F /* iOS */,
-				24DFB3FD2958222D004C754F /* Android */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		24DFB3FC29582224004C754F /* iOS */ = {
+		24DFB3FC29582224004C754F /* iOSDeviceManagement */ = {
 			isa = PBXGroup;
 			children = (
-				24DFB3F829581F1B004C754F /* ManageiOSDeviceViewController.swift */,
-				24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */,
+				24DFB40529640FFF004C754F /* View */,
 			);
-			path = iOS;
+			path = iOSDeviceManagement;
 			sourceTree = "<group>";
 		};
-		24DFB3FD2958222D004C754F /* Android */ = {
+		24DFB3FD2958222D004C754F /* AndroidDeviceManagement */ = {
+			isa = PBXGroup;
+			children = (
+				24DFB40429640FF3004C754F /* View */,
+			);
+			path = AndroidDeviceManagement;
+			sourceTree = "<group>";
+		};
+		24DFB40229640FB3004C754F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				24DFB3F529581E9E004C754F /* Tab */,
+				24DFB3FD2958222D004C754F /* AndroidDeviceManagement */,
+				24DFB3FC29582224004C754F /* iOSDeviceManagement */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		24DFB40429640FF3004C754F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				24DFB3FA29581F2F004C754F /* ManageAndroidDeviceViewController.swift */,
 				24DFB4002958225B004C754F /* ManageAndroidDeviceViewController.xib */,
 			);
-			path = Android;
+			path = View;
+			sourceTree = "<group>";
+		};
+		24DFB40529640FFF004C754F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24DFB3F829581F1B004C754F /* ManageiOSDeviceViewController.swift */,
+				24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24DFB40629641074004C754F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		24DFB40729641089004C754F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

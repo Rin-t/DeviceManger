@@ -69,17 +69,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gct-Rn-dyA">
-                                <rect key="frame" x="343.66666666666669" y="8.3333333333333304" width="20.333333333333314" height="19.666666666666657"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gct-Rn-dyA" secondAttribute="height" multiplier="1:1" id="xeK-jz-yuV"/>
-                                </constraints>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="gearshape.fill" catalog="system">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                </state>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="XeF-P5-6dY">
                                 <rect key="frame" x="170" y="50" width="174" height="55.666666666666657"/>
                                 <subviews>
@@ -123,9 +112,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PII-qW-2QY" firstAttribute="top" secondItem="vFN-1k-BZc" secondAttribute="top" constant="8" id="9Y4-Yg-L7h"/>
-                            <constraint firstAttribute="trailing" secondItem="gct-Rn-dyA" secondAttribute="trailing" constant="12" id="Duy-Om-jtu"/>
                             <constraint firstItem="3Io-T1-5Fe" firstAttribute="top" secondItem="PII-qW-2QY" secondAttribute="bottom" constant="18" id="Udz-Ds-mWY"/>
-                            <constraint firstItem="gct-Rn-dyA" firstAttribute="top" secondItem="vFN-1k-BZc" secondAttribute="top" constant="8" id="UmG-C5-mng"/>
                             <constraint firstItem="XeF-P5-6dY" firstAttribute="leading" secondItem="3Io-T1-5Fe" secondAttribute="trailing" constant="12" id="gIe-aG-vMg"/>
                             <constraint firstItem="XeF-P5-6dY" firstAttribute="centerY" secondItem="3Io-T1-5Fe" secondAttribute="centerY" id="pcs-2d-4ET"/>
                             <constraint firstItem="PII-qW-2QY" firstAttribute="leading" secondItem="vFN-1k-BZc" secondAttribute="leading" constant="8" id="rw9-eq-4b4"/>
@@ -145,10 +132,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

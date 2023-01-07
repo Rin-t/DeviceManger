@@ -136,7 +136,6 @@
 		24DFB38129581B28004C754F /* DeviceManager */ = {
 			isa = PBXGroup;
 			children = (
-				24E15F4329698F34005EE1AA /* Entity */,
 				24DFB40729641089004C754F /* Domain */,
 				24DFB40629641074004C754F /* Data */,
 				24DFB40229640FB3004C754F /* Presentation */,
@@ -222,6 +221,7 @@
 		24DFB40629641074004C754F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F4329698F34005EE1AA /* Entity */,
 			);
 			path = Data;
 			sourceTree = "<group>";

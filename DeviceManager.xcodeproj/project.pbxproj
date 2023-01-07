@@ -25,6 +25,8 @@
 		24DFB3FF29582244004C754F /* ManageiOSDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */; };
 		24DFB4012958225B004C754F /* ManageAndroidDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB4002958225B004C754F /* ManageAndroidDeviceViewController.xib */; };
 		24DFB40D29641A88004C754F /* DeviceManagementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */; };
+		24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F41296959BE005EE1AA /* ManageiOSDeviceViewModel.swift */; };
+		24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageiOSDeviceViewController.xib; sourceTree = "<group>"; };
 		24DFB4002958225B004C754F /* ManageAndroidDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageAndroidDeviceViewController.xib; sourceTree = "<group>"; };
 		24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceManagementCollectionViewCell.xib; sourceTree = "<group>"; };
+		24E15F41296959BE005EE1AA /* ManageiOSDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageiOSDeviceViewModel.swift; sourceTree = "<group>"; };
+		24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		24DFB38129581B28004C754F /* DeviceManager */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F4329698F34005EE1AA /* Entity */,
 				24DFB40729641089004C754F /* Domain */,
 				24DFB40629641074004C754F /* Data */,
 				24DFB40229640FB3004C754F /* Presentation */,
@@ -241,6 +246,7 @@
 		24DFB40929641797004C754F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F41296959BE005EE1AA /* ManageiOSDeviceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +267,14 @@
 				24DFB3FE29582244004C754F /* ManageiOSDeviceViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		24E15F4329698F34005EE1AA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DFB38729581B28004C754F /* ViewController.swift in Sources */,
+				24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */,
+				24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */,
 				24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */,
 				24DFB3FB29581F2F004C754F /* ManageAndroidDeviceViewController.swift in Sources */,
 				24DFB38329581B28004C754F /* AppDelegate.swift in Sources */,

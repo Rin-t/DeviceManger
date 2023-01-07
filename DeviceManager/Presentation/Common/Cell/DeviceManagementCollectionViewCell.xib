@@ -128,6 +128,14 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="376" height="128"/>
+            <connections>
+                <outlet property="accountNameLabel" destination="S0Y-rx-zDO" id="mgi-tA-DGX"/>
+                <outlet property="colorLabel" destination="zLP-UG-CQM" id="z4I-cu-F76"/>
+                <outlet property="deviceName" destination="PII-qW-2QY" id="Gfw-aq-dEm"/>
+                <outlet property="deviceVersionLabel" destination="Egd-p3-omX" id="yf5-pe-mur"/>
+                <outlet property="holderLabel" destination="dnP-Vc-GiR" id="5bk-uc-IIR"/>
+                <outlet property="roundedView" destination="vFN-1k-BZc" id="B1d-Sh-Sir"/>
+            </connections>
             <point key="canvasLocation" x="198.47328244274809" y="-47.887323943661976"/>
         </collectionViewCell>
     </objects>

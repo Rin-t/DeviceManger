@@ -15,7 +15,23 @@ final class DeviceManagementCollectionViewCell: UICollectionViewCell {
         UINib(nibName: identifier, bundle: nil)
     }
 
+    @IBOutlet private weak var roundedView: UIView!
+    @IBOutlet private weak var colorLabel: UILabel!
+    @IBOutlet private weak var deviceName: UILabel!
+    @IBOutlet private weak var holderLabel: UILabel!
+    @IBOutlet private weak var deviceVersionLabel: UILabel!
+    @IBOutlet private weak var accountNameLabel: UILabel!
+    
     func configure() {
-        
+        setupViews()
+    }
+
+    private func setupViews() {
+        roundedView.layer.cornerRadius = 10
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowOpacity = 0.6
+        layer.shadowRadius = 4
+        clipsToBounds = false
+        layer.cornerRadius = 10
     }
 }

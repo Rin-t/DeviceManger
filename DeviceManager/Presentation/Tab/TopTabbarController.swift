@@ -35,8 +35,8 @@ final class TopTabBarController: UITabBarController {
         let vc = ManageAndroidDeviceViewController()
         let nav = UINavigationController(rootViewController: vc)
         let image = UIImage(named: "android")
-        let rewSizeImage = image?.resize(size: CGSize(width: 24, height: 24))
-        nav.tabBarItem = .init(title: "Android", image: rewSizeImage, tag: 1)
+        let reSizeImage = image?.resize(size: CGSize(width: 24, height: 24))
+        nav.tabBarItem = .init(title: "Android", image: reSizeImage, tag: 1)
         nav.title = "Android"
         return nav
     }

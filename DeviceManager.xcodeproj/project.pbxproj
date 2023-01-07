@@ -10,7 +10,6 @@
 		24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A0BC296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift */; };
 		24DFB38329581B28004C754F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB38229581B28004C754F /* AppDelegate.swift */; };
 		24DFB38529581B28004C754F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB38429581B28004C754F /* SceneDelegate.swift */; };
-		24DFB38729581B28004C754F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB38629581B28004C754F /* ViewController.swift */; };
 		24DFB38C29581B28004C754F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB38B29581B28004C754F /* Assets.xcassets */; };
 		24DFB38F29581B28004C754F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB38D29581B28004C754F /* LaunchScreen.storyboard */; };
 		24DFB39A29581B29004C754F /* DeviceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFB39929581B29004C754F /* DeviceManagerTests.swift */; };
@@ -51,7 +50,6 @@
 		24DFB37F29581B28004C754F /* DeviceManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DFB38229581B28004C754F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24DFB38429581B28004C754F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24DFB38629581B28004C754F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24DFB38B29581B28004C754F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24DFB38E29581B28004C754F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24DFB39029581B28004C754F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				24DFB40229640FB3004C754F /* Presentation */,
 				24DFB38229581B28004C754F /* AppDelegate.swift */,
 				24DFB38429581B28004C754F /* SceneDelegate.swift */,
-				24DFB38629581B28004C754F /* ViewController.swift */,
 				24DFB38B29581B28004C754F /* Assets.xcassets */,
 				24DFB38D29581B28004C754F /* LaunchScreen.storyboard */,
 				24DFB39029581B28004C754F /* Info.plist */,
@@ -418,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DFB38729581B28004C754F /* ViewController.swift in Sources */,
 				24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */,
 				24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */,
 				24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */,

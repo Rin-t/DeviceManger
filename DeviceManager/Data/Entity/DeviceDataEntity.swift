@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DeviceDataEntity {
+struct DeviceDataEntity: Codable {
     let device: String
     let holder: String
     let version: String

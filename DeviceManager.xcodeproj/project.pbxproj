@@ -26,6 +26,8 @@
 		24DFB40D29641A88004C754F /* DeviceManagementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */; };
 		24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F41296959BE005EE1AA /* ManageiOSDeviceViewModel.swift */; };
 		24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */; };
+		24E15F48296996DF005EE1AA /* DeviceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F47296996DF005EE1AA /* DeviceDataStore.swift */; };
+		24E15F4C296AFD93005EE1AA /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceManagementCollectionViewCell.xib; sourceTree = "<group>"; };
 		24E15F41296959BE005EE1AA /* ManageiOSDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageiOSDeviceViewModel.swift; sourceTree = "<group>"; };
 		24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataEntity.swift; sourceTree = "<group>"; };
+		24E15F47296996DF005EE1AA /* DeviceDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataStore.swift; sourceTree = "<group>"; };
+		24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 		24DFB38129581B28004C754F /* DeviceManager */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F49296AFD77005EE1AA /* Extensions */,
 				24DFB40729641089004C754F /* Domain */,
 				24DFB40629641074004C754F /* Data */,
 				24DFB40229640FB3004C754F /* Presentation */,
@@ -221,6 +226,7 @@
 		24DFB40629641074004C754F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F46296996C8005EE1AA /* DataStrore */,
 				24E15F4329698F34005EE1AA /* Entity */,
 			);
 			path = Data;
@@ -272,6 +278,22 @@
 				24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		24E15F46296996C8005EE1AA /* DataStrore */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F47296996DF005EE1AA /* DeviceDataStore.swift */,
+			);
+			path = DataStrore;
+			sourceTree = "<group>";
+		};
+		24E15F49296AFD77005EE1AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E15F4C296AFD93005EE1AA /* UserDefault+Extension.swift in Sources */,
 				24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */,
 				24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */,
 				24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */,
@@ -423,6 +446,7 @@
 				24DFB3F929581F1B004C754F /* ManageiOSDeviceViewController.swift in Sources */,
 				24DFB38529581B28004C754F /* SceneDelegate.swift in Sources */,
 				24DFB3F729581EB4004C754F /* TopTabbarController.swift in Sources */,
+				24E15F48296996DF005EE1AA /* DeviceDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

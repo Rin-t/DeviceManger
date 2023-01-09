@@ -39,4 +39,9 @@ extension UserDefaults {
             throw StructDataError.decodeError
         }
     }
+
+    static func removeAll() {
+        let appDomain = Bundle.main.bundleIdentifier
+        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+    }
 }

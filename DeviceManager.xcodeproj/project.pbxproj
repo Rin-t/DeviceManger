@@ -28,6 +28,7 @@
 		24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */; };
 		24E15F48296996DF005EE1AA /* DeviceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F47296996DF005EE1AA /* DeviceDataStore.swift */; };
 		24E15F4C296AFD93005EE1AA /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */; };
+		24E15F4E296C46D6005EE1AA /* DeviceDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4D296C46D6005EE1AA /* DeviceDataUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		24E15F4429698F52005EE1AA /* DeviceDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataEntity.swift; sourceTree = "<group>"; };
 		24E15F47296996DF005EE1AA /* DeviceDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataStore.swift; sourceTree = "<group>"; };
 		24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
+		24E15F4D296C46D6005EE1AA /* DeviceDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		24DFB40729641089004C754F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F4D296C46D6005EE1AA /* DeviceDataUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */,
 				24E15F42296959BE005EE1AA /* ManageiOSDeviceViewModel.swift in Sources */,
 				24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */,
+				24E15F4E296C46D6005EE1AA /* DeviceDataUseCase.swift in Sources */,
 				24DFB3FB29581F2F004C754F /* ManageAndroidDeviceViewController.swift in Sources */,
 				24DFB38329581B28004C754F /* AppDelegate.swift in Sources */,
 				24DFB3F929581F1B004C754F /* ManageiOSDeviceViewController.swift in Sources */,

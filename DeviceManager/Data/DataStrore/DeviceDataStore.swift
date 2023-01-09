@@ -15,8 +15,26 @@ protocol DeviceStoreProtocol {
 
 final class DeviceDataStore: DeviceStoreProtocol {
 
-    private let deviceDataKey = "deviceData"
+    enum OSType {
+        case iOS
+        case android
+
+        var key: String {
+            switch self {
+            case .iOS: return "iOSDeviceData"
+            case .android: return "AndroidDeviceData"
+            }
+        }
+    }
+
+    private let deviceDataKey: String
     private let userDefault = UserDefaults.standard
+    private let type: OSType
+
+    init(type: OSType) {
+        self.type = type
+        deviceDataKey = type.key
+    }
 
     func updateData(data: [DeviceDataEntity]) throws {
         try userDefault.set(struct: data, key: deviceDataKey)

@@ -8,7 +8,8 @@
 import Foundation
 
 protocol DeviceDataUseCaseProtocol {
-    func loadDeviceData() throws -> [DeviceDataEntity]
+    var deviceData: [DeviceDataEntity] { get }
+    func loadDeviceData() throws
     func update(data: DeviceDataEntity, at index: Int) throws
     func addDeviceData(data: DeviceDataEntity) throws
     func remove(at index: Int) throws
@@ -17,13 +18,13 @@ protocol DeviceDataUseCaseProtocol {
 final class DeviceDataUseCase: DeviceDataUseCaseProtocol {
 
     private let dataStore: DeviceStoreProtocol
-    private var deviceData: [DeviceDataEntity] = []
+    var deviceData: [DeviceDataEntity] = []
 
     init(dataStore: DeviceStoreProtocol) {
         self.dataStore = dataStore
     }
 
-    func loadDeviceData() throws -> [DeviceDataEntity] {
+    func loadDeviceData() throws {
         do {
             deviceData = try dataStore.loadDate()
         } catch let error as UserDefaults.StructDataError {

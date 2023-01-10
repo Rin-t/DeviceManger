@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageiOSDeviceViewController" customModule="DeviceManager" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="tNa-7W-8AU"/>
+                <outlet property="addDeviceButton" destination="TBf-aU-QNC" id="x6v-LF-Fut"/>
+                <outlet property="collectionView" destination="mSu-yH-7mX" id="rbP-d7-w5X"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nOy-5d-LQN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,21 +31,41 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBf-aU-QNC">
+                    <rect key="frame" x="329" y="754" width="44" height="44"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="4HJ-5G-Bp7"/>
+                        <constraint firstAttribute="height" constant="44" id="MfD-bW-3RX"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mSu-yH-7mX" secondAttribute="bottom" constant="12" id="AU0-8c-fvw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mSu-yH-7mX" secondAttribute="bottom" constant="12" id="PL5-AS-pmg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TBf-aU-QNC" secondAttribute="trailing" constant="20" id="SQN-ni-0Mw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mSu-yH-7mX" secondAttribute="trailing" constant="12" id="fRe-Kv-HkM"/>
+                <constraint firstItem="mSu-yH-7mX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="fo7-FP-Ebp"/>
                 <constraint firstItem="mSu-yH-7mX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="gdG-VB-HpK"/>
-                <constraint firstItem="mSu-yH-7mX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="vgu-ie-w22"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TBf-aU-QNC" secondAttribute="bottom" constant="20" id="upz-ya-ZYE"/>
             </constraints>
-            <point key="canvasLocation" x="48" y="20"/>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

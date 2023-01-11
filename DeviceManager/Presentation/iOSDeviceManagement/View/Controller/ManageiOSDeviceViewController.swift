@@ -27,6 +27,7 @@ final class ManageiOSDeviceViewController: UIViewController {
         }
     }
     private let disposeBag = DisposeBag()
+    private let viewModel = ManageiOSDeviceViewModel(useCase: DeviceDataUseCase(dataStore: DeviceDataStore(type: .iOS)))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +35,8 @@ final class ManageiOSDeviceViewController: UIViewController {
         navigationItem.title = "iOSデバイス管理"
 
         setupCollectionLayout()
-
-        let item = Observable.just([1, 2, 3, 4])
-
-        item.bind(to: collectionView.rx.items) { (collectionView, row, element) in
+        viewModel.input.viewWillAppear()
+        viewModel.deviceData.bind(to: collectionView.rx.items) { (collectionView, row, element) in
             print(element)
             let indexPath = IndexPath(row: row, section: 0)
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as! Cell

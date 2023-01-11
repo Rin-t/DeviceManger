@@ -28,7 +28,10 @@ final class DeviceDataUseCase: DeviceDataUseCaseProtocol {
         do {
             deviceData = try dataStore.loadDate()
         } catch let error as UserDefaults.StructDataError {
-            throw error
+            switch error {
+            case .noDataError: break
+            default: throw error
+            }
         }
     }
 

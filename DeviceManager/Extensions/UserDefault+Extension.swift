@@ -26,17 +26,15 @@ extension UserDefaults {
         }
     }
 
-    func structData(key: String) throws -> [DeviceDataEntity] {
+    func structData<T: Decodable>(key: String) throws -> T {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        guard let data = UserDefaults.standard.data(forKey: key) else {
+            throw StructDataError.noDataError
+        }
         do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            guard let data = UserDefaults.standard.data(forKey: key) else {
-                throw StructDataError.noDataError
-            }
-            print(data)
-
-           // let decodedData = try decoder.decode([DeviceDataEntity].self, from: data)
-            return []
+            let decodedData = try decoder.decode(T.self, from: data)
+            return decodedData
         } catch {
             throw StructDataError.decodeError
         }

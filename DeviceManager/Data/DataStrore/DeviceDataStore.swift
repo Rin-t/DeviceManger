@@ -41,8 +41,8 @@ final class DeviceDataStore: DeviceStoreProtocol {
     }
 
     func loadDate() throws -> [DeviceDataEntity] {
-        let date = try userDefault.structData(key: deviceDataKey)
-        return []
+        let data: [DeviceDataEntity] = try userDefault.structData(key: deviceDataKey)
+        return data
     }
 }
 

@@ -29,6 +29,8 @@
 		24E15F48296996DF005EE1AA /* DeviceDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F47296996DF005EE1AA /* DeviceDataStore.swift */; };
 		24E15F4C296AFD93005EE1AA /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */; };
 		24E15F4E296C46D6005EE1AA /* DeviceDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F4D296C46D6005EE1AA /* DeviceDataUseCase.swift */; };
+		24E15F51296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E15F50296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift */; };
+		24E15F55296EF614005EE1AA /* AddNewDeviceDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E15F54296EF614005EE1AA /* AddNewDeviceDataViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		24E15F47296996DF005EE1AA /* DeviceDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataStore.swift; sourceTree = "<group>"; };
 		24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
 		24E15F4D296C46D6005EE1AA /* DeviceDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDataUseCase.swift; sourceTree = "<group>"; };
+		24E15F50296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceDataViewController.swift; sourceTree = "<group>"; };
+		24E15F54296EF614005EE1AA /* AddNewDeviceDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewDeviceDataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		24A0A0BB2967029500F15B80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				24E15F4F296EF5A8005EE1AA /* ViewController */,
 				24DFB40A29641A48004C754F /* Cell */,
 			);
 			path = Common;
@@ -299,6 +304,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		24E15F4F296EF5A8005EE1AA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F53296EF5D6005EE1AA /* EditDeviceData */,
+				24E15F52296EF5CB005EE1AA /* AddNewDeviceData */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		24E15F52296EF5CB005EE1AA /* AddNewDeviceData */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F50296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift */,
+				24E15F54296EF614005EE1AA /* AddNewDeviceDataViewController.xib */,
+			);
+			path = AddNewDeviceData;
+			sourceTree = "<group>";
+		};
+		24E15F53296EF5D6005EE1AA /* EditDeviceData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditDeviceData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DFB3FF29582244004C754F /* ManageiOSDeviceViewController.xib in Resources */,
+				24E15F55296EF614005EE1AA /* AddNewDeviceDataViewController.xib in Resources */,
 				24DFB38F29581B28004C754F /* LaunchScreen.storyboard in Resources */,
 				24DFB40D29641A88004C754F /* DeviceManagementCollectionViewCell.xib in Resources */,
 				24DFB38C29581B28004C754F /* Assets.xcassets in Resources */,
@@ -446,6 +477,7 @@
 				24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */,
 				24E15F4E296C46D6005EE1AA /* DeviceDataUseCase.swift in Sources */,
 				24DFB3FB29581F2F004C754F /* ManageAndroidDeviceViewController.swift in Sources */,
+				24E15F51296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift in Sources */,
 				24DFB38329581B28004C754F /* AppDelegate.swift in Sources */,
 				24DFB3F929581F1B004C754F /* ManageiOSDeviceViewController.swift in Sources */,
 				24DFB38529581B28004C754F /* SceneDelegate.swift in Sources */,

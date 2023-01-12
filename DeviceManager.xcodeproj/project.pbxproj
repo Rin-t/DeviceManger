@@ -109,8 +109,9 @@
 		24A0A0BB2967029500F15B80 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				24E15F4F296EF5A8005EE1AA /* ViewController */,
-				24DFB40A29641A48004C754F /* Cell */,
+				24E15F52296EF5CB005EE1AA /* AddNewDeviceData */,
+				24E15F53296EF5D6005EE1AA /* EditDeviceData */,
+				24DFB40A29641A48004C754F /* DeviceManagementCollectionViewCell */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -262,13 +263,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		24DFB40A29641A48004C754F /* Cell */ = {
+		24DFB40A29641A48004C754F /* DeviceManagementCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				24DFB40C29641A88004C754F /* DeviceManagementCollectionViewCell.xib */,
 				24A0A0BC296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift */,
 			);
-			path = Cell;
+			path = DeviceManagementCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		24DFB40B29641A4E004C754F /* Controller */ = {
@@ -304,20 +305,11 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		24E15F4F296EF5A8005EE1AA /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				24E15F53296EF5D6005EE1AA /* EditDeviceData */,
-				24E15F52296EF5CB005EE1AA /* AddNewDeviceData */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		24E15F52296EF5CB005EE1AA /* AddNewDeviceData */ = {
 			isa = PBXGroup;
 			children = (
-				24E15F50296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift */,
-				24E15F54296EF614005EE1AA /* AddNewDeviceDataViewController.xib */,
+				24E15F5729703173005EE1AA /* ViewModel */,
+				24E15F562970313B005EE1AA /* Controller */,
 			);
 			path = AddNewDeviceData;
 			sourceTree = "<group>";
@@ -327,6 +319,22 @@
 			children = (
 			);
 			path = EditDeviceData;
+			sourceTree = "<group>";
+		};
+		24E15F562970313B005EE1AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24E15F50296EF5C6005EE1AA /* AddNewDeviceDataViewController.swift */,
+				24E15F54296EF614005EE1AA /* AddNewDeviceDataViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24E15F5729703173005EE1AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

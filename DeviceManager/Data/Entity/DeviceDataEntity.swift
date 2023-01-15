@@ -8,6 +8,7 @@
 import Foundation
 
 struct DeviceDataEntity: Codable {
+    let id: String
     let device: String
     let holder: String
     let version: String

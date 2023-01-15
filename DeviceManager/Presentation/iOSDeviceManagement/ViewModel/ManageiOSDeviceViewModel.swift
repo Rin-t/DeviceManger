@@ -26,10 +26,11 @@ protocol ManageiOSDeviceViewModelType {
 final class ManageiOSDeviceViewModel: ManageiOSDeviceViewModelInput, ManageiOSDeviceViewModelOutput {
 
     var deviceData: Observable<[DeviceDataEntity]> {
-        return Observable.of(useCase.deviceData)
+        return deviceDataRelay.asObservable()
     }
     
     private let useCase: DeviceDataUseCaseProtocol
+    private let deviceDataRelay = BehaviorRelay<[DeviceDataEntity]>(value: [])
 
     init(useCase: DeviceDataUseCaseProtocol) {
         self.useCase = useCase
@@ -38,6 +39,7 @@ final class ManageiOSDeviceViewModel: ManageiOSDeviceViewModelInput, ManageiOSDe
     func viewWillAppear() {
         do {
             try useCase.loadDeviceData()
+            deviceDataRelay.accept(useCase.deviceData)
         } catch {
             print("エラー", error)
         }

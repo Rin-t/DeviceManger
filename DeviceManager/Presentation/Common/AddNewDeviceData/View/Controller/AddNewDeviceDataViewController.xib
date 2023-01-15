@@ -9,15 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewDeviceViewController" customModule="DeviceManager" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewDeviceDataViewController" customModule="DeviceManager" customModuleProvider="target">
             <connections>
-                <outlet property="deviceAccountTextField" destination="2Vk-99-fDs" id="VbO-PA-UoI"/>
-                <outlet property="deviceColorTextField" destination="60I-1Q-b0f" id="uh3-Je-bGo"/>
-                <outlet property="deviceNameTextField" destination="FeP-Qa-24c" id="iGg-C7-OTU"/>
-                <outlet property="deviceVersionTextField" destination="82c-Aa-LvI" id="7mk-wl-C1j"/>
-                <outlet property="holderTextField" destination="G8S-6t-d7A" id="hgi-27-snW"/>
+                <outlet property="alertTextLabel" destination="mmA-cz-TCR" id="TZH-vd-els"/>
+                <outlet property="deviceAccountTextField" destination="2Vk-99-fDs" id="5cC-Zr-L5m"/>
+                <outlet property="deviceColorTextField" destination="60I-1Q-b0f" id="baY-YL-RHI"/>
+                <outlet property="deviceNameTextField" destination="FeP-Qa-24c" id="fA4-a6-oew"/>
+                <outlet property="deviceVersionTextField" destination="82c-Aa-LvI" id="YhP-Un-ZNE"/>
+                <outlet property="holderTextField" destination="G8S-6t-d7A" id="Y6y-hZ-XKl"/>
                 <outlet property="saveButton" destination="DxB-6i-7E9" id="czf-Zy-JCR"/>
-                <outlet property="view" destination="iN0-l3-epB" id="OVK-8i-6ba"/>
+                <outlet property="view" destination="iN0-l3-epB" id="2LE-Tb-Mam"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -142,11 +143,19 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="保存"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての項目を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-cz-TCR">
+                    <rect key="frame" x="89.333333333333329" y="535" width="214.33333333333337" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
+                <constraint firstItem="mmA-cz-TCR" firstAttribute="top" secondItem="DxB-6i-7E9" secondAttribute="bottom" constant="24" id="7eP-mu-iL5"/>
                 <constraint firstItem="IJK-br-qVn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="7kx-bK-6z6"/>
+                <constraint firstItem="mmA-cz-TCR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O9S-1R-mcj"/>
                 <constraint firstItem="DxB-6i-7E9" firstAttribute="top" secondItem="IJK-br-qVn" secondAttribute="bottom" constant="80" id="orq-Hk-uje"/>
                 <constraint firstItem="IJK-br-qVn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="uVr-Cw-Slm"/>
                 <constraint firstItem="DxB-6i-7E9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vRx-qR-ntT"/>
@@ -157,11 +166,14 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

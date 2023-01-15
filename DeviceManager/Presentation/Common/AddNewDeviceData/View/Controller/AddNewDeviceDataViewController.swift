@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 
-final class AddNewDeviceViewController: UIViewController {
+final class AddNewDeviceDataViewController: UIViewController {
 
     @IBOutlet private weak var deviceNameTextField: UITextField!
     @IBOutlet private weak var deviceColorTextField: UITextField!
@@ -22,6 +22,8 @@ final class AddNewDeviceViewController: UIViewController {
             saveButton.layer.cornerRadius = 8
         }
     }
+
+    @IBOutlet private weak var alertTextLabel: UILabel!
 
     private let viewModel: AddNewDeviceViewModelType
     private let disposeBag = DisposeBag()
@@ -39,7 +41,10 @@ final class AddNewDeviceViewController: UIViewController {
         super.viewDidLoad()
         setupInputs()
         setupOutput()
+        tabBarController?.tabBar.isHidden = true
     }
+
+
 
     private func setupOutput() {
 
@@ -55,6 +60,14 @@ final class AddNewDeviceViewController: UIViewController {
                 let action = UIAlertAction(title: "OK", style: .default)
                 alert.addAction(action)
                 self?.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.output.isEnabledButton
+            .subscribe(onNext: { [weak self] isEnabled in
+                self?.saveButton.isEnabled = isEnabled
+                self?.saveButton.backgroundColor = isEnabled ? .orange : .systemGray3
+                self?.alertTextLabel.isHidden = isEnabled
             })
             .disposed(by: disposeBag)
     }

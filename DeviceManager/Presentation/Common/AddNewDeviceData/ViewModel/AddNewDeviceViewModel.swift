@@ -78,7 +78,6 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
                     try self?.useCase.loadDeviceData()
                     try self?.useCase.addDeviceData(data: deviceData)
                     self?.dismissViewRelay.accept(())
-                    print("保存できました")
                 } catch {
                     self?.alertMessageRelay.accept("データの保存に追加に失敗しました")
                 }

@@ -32,7 +32,7 @@ protocol AddNewDeviceViewModelType {
 
 final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewModelOutput {
 
-
+    // input
     let deviceName = BehaviorRelay<String>(value: "")
     let accountName = BehaviorRelay<String>(value: "")
     let deviceColor = BehaviorRelay<String>(value: "")
@@ -40,8 +40,7 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
     let holder = BehaviorRelay<String>(value: "")
     let tappedButton = PublishRelay<DeviceDataEntity>()
 
-    private let useCase: DeviceDataUseCaseProtocol
-
+    // output
     var alertMessage: Observable<String>  {
         return alertMessageRelay.asObservable()
     }
@@ -52,9 +51,11 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
         return dismissViewRelay.asObservable()
     }
 
-    let isEnabledButtonRelay = BehaviorRelay<Bool>(value: false)
-    let alertMessageRelay = PublishRelay<String>()
-    let dismissViewRelay = PublishRelay<Void>()
+    // properties
+    private let useCase: DeviceDataUseCaseProtocol
+    private let isEnabledButtonRelay = BehaviorRelay<Bool>(value: false)
+    private let alertMessageRelay = PublishRelay<String>()
+    private let dismissViewRelay = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
 
     init(useCase: DeviceDataUseCaseProtocol) {
@@ -62,7 +63,11 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
 
         Observable.combineLatest(deviceName, accountName, deviceColor, version, holder)
             .map { deviceName, accountName, deviceColor, version, holder in
-                !deviceName.isEmpty && !accountName.isEmpty && !deviceColor.isEmpty && !version.isEmpty && !holder.isEmpty
+                !deviceName.isEmpty
+                && !accountName.isEmpty
+                && !deviceColor.isEmpty
+                && !version.isEmpty
+                && !holder.isEmpty
             }
             .bind(to: isEnabledButtonRelay)
             .disposed(by: disposeBag)
@@ -72,6 +77,7 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
                 do {
                     try self?.useCase.addDeviceData(data: deviceData)
                     self?.dismissViewRelay.accept(())
+                    print("保存できました")
                 } catch {
                     self?.alertMessageRelay.accept("データの保存に追加に失敗しました")
                 }

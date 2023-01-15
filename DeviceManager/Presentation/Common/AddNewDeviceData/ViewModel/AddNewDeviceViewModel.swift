@@ -75,6 +75,7 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
         tappedButton
             .subscribe { [weak self] deviceData in
                 do {
+                    try self?.useCase.loadDeviceData()
                     try self?.useCase.addDeviceData(data: deviceData)
                     self?.dismissViewRelay.accept(())
                     print("保存できました")

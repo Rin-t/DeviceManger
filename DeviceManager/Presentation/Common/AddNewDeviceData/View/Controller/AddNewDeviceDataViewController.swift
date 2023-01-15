@@ -44,22 +44,19 @@ final class AddNewDeviceDataViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
-
-
     private func setupOutput() {
 
         viewModel.output.dismissView
             .subscribe { [weak self] _ in
-                self?.dismiss(animated: true)
+                self?.showAlert(message: "保存に成功しました", completion: {
+                    self?.navigationController?.popViewController(animated: true)
+                })
             }
             .disposed(by: disposeBag)
 
         viewModel.output.alertMessage
             .subscribe(onNext: { [weak self] message in
-                let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default)
-                alert.addAction(action)
-                self?.present(alert, animated: true)
+                self?.showAlert(message: message, completion: nil)
             })
             .disposed(by: disposeBag)
 
@@ -92,6 +89,27 @@ final class AddNewDeviceDataViewController: UIViewController {
         deviceVersionTextField.rx.text.orEmpty
             .bind(to: viewModel.input.version)
             .disposed(by: disposeBag)
+
+        saveButton.rx.tap
+            .subscribe { [weak self] _ in
+                let device = self?.deviceNameTextField.text ?? ""
+                let color = self?.deviceColorTextField.text ?? ""
+                let account = self?.deviceAccountTextField.text ?? ""
+                let holder = self?.holderTextField.text ?? ""
+                let version = self?.deviceVersionTextField.text ?? ""
+                let data = DeviceDataEntity(device: device, holder: holder, version: version, color: color, accountName: account)
+                self?.viewModel.input.tappedButton.accept(data)
+            }
+            .disposed(by: disposeBag)
+    }
+
+    private func showAlert(message: String, completion: (() -> Void)?) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { _ in
+            completion?()
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 
 }

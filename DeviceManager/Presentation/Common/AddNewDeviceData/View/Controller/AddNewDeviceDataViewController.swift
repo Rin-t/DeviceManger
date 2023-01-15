@@ -12,19 +12,20 @@ import RxCocoa
 
 final class AddNewDeviceDataViewController: UIViewController {
 
+    // outlets
     @IBOutlet private weak var deviceNameTextField: UITextField!
     @IBOutlet private weak var deviceColorTextField: UITextField!
     @IBOutlet private weak var deviceAccountTextField: UITextField!
     @IBOutlet private weak var holderTextField: UITextField!
     @IBOutlet private weak var deviceVersionTextField: UITextField!
+    @IBOutlet private weak var alertTextLabel: UILabel!
     @IBOutlet private weak var saveButton: UIButton! {
         didSet {
             saveButton.layer.cornerRadius = 8
         }
     }
 
-    @IBOutlet private weak var alertTextLabel: UILabel!
-
+    // properties
     private let viewModel: AddNewDeviceViewModelType
     private let disposeBag = DisposeBag()
 
@@ -111,6 +112,5 @@ final class AddNewDeviceDataViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
-
 }
 

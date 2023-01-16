@@ -98,8 +98,12 @@ final class AddNewDeviceDataViewController: UIViewController {
                 let account = self?.deviceAccountTextField.text ?? ""
                 let holder = self?.holderTextField.text ?? ""
                 let version = self?.deviceVersionTextField.text ?? ""
-                let data = DeviceDataEntity(device: device, holder: holder, version: version, color: color, accountName: account)
-                self?.viewModel.input.tappedButton.accept(data)
+                let data = DeviceDataEntity(device: device,
+                                            holder: holder,
+                                            version: version,
+                                            color: color,
+                                            accountName: account)
+                self?.viewModel.input.tappedSaveButton.accept(data)
             }
             .disposed(by: disposeBag)
     }

@@ -30,7 +30,7 @@ final class EditDeviceDataViewController: UIViewController {
     init(type: DeviceDataStore.OSType, selectedIndex: IndexPath) {
         self.viewModel = EditDeviceDataViewModel(
             useCase: DeviceDataUseCase(
-                dataStore: DeviceDataStore(type: .iOS)
+                dataStore: DeviceDataStore(type: type)
             ), selectedRow: selectedIndex.row
         )
         super.init(nibName: nil, bundle: nil)
@@ -100,7 +100,7 @@ final class EditDeviceDataViewController: UIViewController {
             .bind(to: viewModel.input.holder)
             .disposed(by: disposeBag)
 
-        deviceTextField.rx.text.orEmpty
+        versionTextField.rx.text.orEmpty
             .bind(to: viewModel.input.version)
             .disposed(by: disposeBag)
 
@@ -109,7 +109,6 @@ final class EditDeviceDataViewController: UIViewController {
     private func setupOutput() {
         viewModel.output.deviceData
             .subscribe(onNext: { [weak self] deviceData in
-                print("deviceData")
                 self?.deviceTextField.text = deviceData.device
                 self?.colorTextField.text = deviceData.color
                 self?.accountTextField.text = deviceData.accountName
@@ -134,25 +133,5 @@ final class EditDeviceDataViewController: UIViewController {
                 })
             })
             .disposed(by: disposeBag)
-    }
-
-    private func showAlert(message: String, completion: (() -> Void)?) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { _ in
-            completion?()
-        }
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
-
-    private func showDestructiveAlert(message: String, completion: (() -> Void)?) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let destructive = UIAlertAction(title: "削除する", style: .destructive) { _ in
-            completion?()
-        }
-        let cancel = UIAlertAction(title: "キャンセル", style: .cancel)
-        alert.addAction(destructive)
-        alert.addAction(cancel)
-        present(alert, animated: true)
     }
 }

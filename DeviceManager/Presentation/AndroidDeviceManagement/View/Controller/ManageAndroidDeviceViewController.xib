@@ -11,40 +11,61 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageAndroidDeviceViewController" customModule="DeviceManager" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="qDv-hQ-xTd" id="41y-nw-r3f"/>
-                <outlet property="view" destination="iN0-l3-epB" id="bqN-tb-ifF"/>
+                <outlet property="addDeviceButton" destination="zmg-y4-faS" id="RaS-gW-1R2"/>
+                <outlet property="collectionView" destination="VNv-b7-Cs6" id="1a9-sZ-Cev"/>
+                <outlet property="view" destination="vaJ-Sw-yhj" id="rrP-Ng-agm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="vaJ-Sw-yhj">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qDv-hQ-xTd">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VNv-b7-Cs6">
                     <rect key="frame" x="12" y="71" width="369" height="735"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cAV-fy-o62">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I5G-1l-AsN">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmg-y4-faS">
+                    <rect key="frame" x="329" y="754" width="44" height="44"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="2ji-bl-42f"/>
+                        <constraint firstAttribute="height" constant="44" id="M5n-wa-rrR"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
+                </button>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <viewLayoutGuide key="safeArea" id="n4o-ks-ALU"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
-                <constraint firstItem="qDv-hQ-xTd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="8yi-Af-u6Y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qDv-hQ-xTd" secondAttribute="bottom" constant="12" id="DcF-BT-aDK"/>
-                <constraint firstItem="qDv-hQ-xTd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="oCa-EF-yMI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qDv-hQ-xTd" secondAttribute="trailing" constant="12" id="sAE-Zg-81D"/>
+                <constraint firstItem="n4o-ks-ALU" firstAttribute="trailing" secondItem="VNv-b7-Cs6" secondAttribute="trailing" constant="12" id="KP5-ng-nTK"/>
+                <constraint firstItem="n4o-ks-ALU" firstAttribute="bottom" secondItem="zmg-y4-faS" secondAttribute="bottom" constant="20" id="YWT-bF-o2V"/>
+                <constraint firstItem="VNv-b7-Cs6" firstAttribute="leading" secondItem="n4o-ks-ALU" secondAttribute="leading" constant="12" id="brw-oI-b97"/>
+                <constraint firstItem="n4o-ks-ALU" firstAttribute="trailing" secondItem="zmg-y4-faS" secondAttribute="trailing" constant="20" id="gFh-UQ-RFy"/>
+                <constraint firstItem="n4o-ks-ALU" firstAttribute="bottom" secondItem="VNv-b7-Cs6" secondAttribute="bottom" constant="12" id="mMI-5h-FGH"/>
+                <constraint firstItem="VNv-b7-Cs6" firstAttribute="top" secondItem="n4o-ks-ALU" secondAttribute="top" constant="12" id="s02-pp-fEf"/>
             </constraints>
-            <point key="canvasLocation" x="48" y="20"/>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

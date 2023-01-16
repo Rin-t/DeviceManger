@@ -15,7 +15,7 @@ protocol AddNewDeviceViewModelInput {
     var deviceColor: BehaviorRelay<String> { get }
     var version: BehaviorRelay<String> { get }
     var holder: BehaviorRelay<String> { get }
-    var tappedButton: PublishRelay<DeviceDataEntity> { get }
+    var tappedSaveButton: PublishRelay<DeviceDataEntity> { get }
 }
 
 protocol AddNewDeviceViewModelOutput {
@@ -38,7 +38,7 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
     let deviceColor = BehaviorRelay<String>(value: "")
     let version = BehaviorRelay<String>(value: "")
     let holder = BehaviorRelay<String>(value: "")
-    let tappedButton = PublishRelay<DeviceDataEntity>()
+    let tappedSaveButton = PublishRelay<DeviceDataEntity>()
 
     // output
     var alertMessage: Observable<String>  {
@@ -72,7 +72,7 @@ final class AddNewDeviceViewModel: AddNewDeviceViewModelInput, AddNewDeviceViewM
             .bind(to: isEnabledButtonRelay)
             .disposed(by: disposeBag)
 
-        tappedButton
+        tappedSaveButton
             .subscribe { [weak self] deviceData in
                 do {
                     try self?.useCase.loadDeviceData()

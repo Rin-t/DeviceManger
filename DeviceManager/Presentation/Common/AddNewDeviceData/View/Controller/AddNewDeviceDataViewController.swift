@@ -107,14 +107,5 @@ final class AddNewDeviceDataViewController: UIViewController {
             }
             .disposed(by: disposeBag)
     }
-
-    private func showAlert(message: String, completion: (() -> Void)?) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { _ in
-            completion?()
-        }
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
 }
 

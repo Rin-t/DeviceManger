@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2408510D2975872300092066 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408510C2975872300092066 /* UIViewController+Extension.swift */; };
+		2408510F297587BD00092066 /* ManageAndroidDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408510E297587BD00092066 /* ManageAndroidDeviceViewModel.swift */; };
 		24A0A0BD296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A0BC296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift */; };
 		24D8ABE62972B4CE001BD6A0 /* AddNewDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8ABE52972B4CE001BD6A0 /* AddNewDeviceViewModel.swift */; };
 		24D8ABED2973E3E6001BD6A0 /* EditDeviceDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8ABEC2973E3E6001BD6A0 /* EditDeviceDataViewModel.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2408510C2975872300092066 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2408510E297587BD00092066 /* ManageAndroidDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAndroidDeviceViewModel.swift; sourceTree = "<group>"; };
 		24A0A0BC296702FF00F15B80 /* DeviceManagementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagementCollectionViewCell.swift; sourceTree = "<group>"; };
 		24D8ABE52972B4CE001BD6A0 /* AddNewDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceViewModel.swift; sourceTree = "<group>"; };
 		24D8ABEC2973E3E6001BD6A0 /* EditDeviceDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceDataViewModel.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		24DFB4082964178D004C754F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2408510E297587BD00092066 /* ManageAndroidDeviceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				24E15F4B296AFD93005EE1AA /* UserDefault+Extension.swift */,
+				2408510C2975872300092066 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -516,6 +522,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2408510D2975872300092066 /* UIViewController+Extension.swift in Sources */,
+				2408510F297587BD00092066 /* ManageAndroidDeviceViewModel.swift in Sources */,
 				24E15F4C296AFD93005EE1AA /* UserDefault+Extension.swift in Sources */,
 				24E15F4529698F52005EE1AA /* DeviceDataEntity.swift in Sources */,
 				24D8ABED2973E3E6001BD6A0 /* EditDeviceDataViewModel.swift in Sources */,
